@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 0;
+     background: azure;
+     }
+     /* navbar container */
+     nav{
+
+        background-color: beige;
+        padding: 15px;
+        text-align: center;
+     }
+
+     /* all links in navbar */
+     nav a{
+     text-decoration: double;
+     color: aqua;
+     padding:10px 20px;
+     display: inline-block;
+     font-size: 18px;
+     }
+     /* pseudo classses */
+     a:link{
+        color: crimson;
+     }
+      
+     a:visited{
+        color: bisque;
+     }
+     
+     a:hover{
+        background-color: palevioletred;
+        color: blanchedalmond;
+     }
+
+     a:active{
+        background-color: antiquewhite;
+     }
+
+     a:focus{
+        outline: 2px solid peachpuff;
+     }
+     /* before & after */
+     a:before {
+        content: 👻;
+     }
+     a:after{
+        content:☠️;
+     }
+     /* first and last child  */
+     a:first child{
+        background-color: chocolate;
+     }
+     a:last child{
+        background-color: aquamarine;
+     }
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html"target="_blank">home</a>
+    <a href="about.html"target="_blank">about</a>
+    <a href="services.html"target="_blank">services</a>
+    <a href="contact.html"target="_blank">contact</a>
+  </nav>  
+
+  <p style="text-align: center;margin-top: 50px;">
+    click the links and notice how each pseudo-class reacts differently!
+  </p>
+</body>
+</html>

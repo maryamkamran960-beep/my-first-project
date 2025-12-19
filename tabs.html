@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery UI Tabs Example</title>
+
+    <!-- jQuery and jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- jQuery and jQuery UI JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+   
+</head>
+<body>
+ <script>
+        $(function () {
+            $("#tab").tabs();
+        });
+    </script>
+    <div id="tab">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div id="home">
+            <h1>Home</h1>
+            <p>Welcome to the home tab. This section provides an overview of the website.</p>
+        </div>
+
+        <div id="about">
+            <h2>About</h2>
+            <p>This tab contains information about our organization and what we do.</p>
+        </div>
+
+        <div id="contact">
+            <h2>Contact</h2>
+            <p>You can reach us via email or phone. We look forward to hearing from you.</p>
+        </div>
+    </div>
+
+</body>
+</html>

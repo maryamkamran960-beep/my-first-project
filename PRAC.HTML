@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmetic Beauty</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff5fa;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            position: fixed;
+            top: 0;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        nav.scrolled {
+            padding: 10px 50px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff4fa3;
+        }
+
+        /* HOME */
+        #home {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease;
+        }
+
+        #home p {
+            color: #ffe4ef;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            animation: fadeIn 2.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        section {
+            padding: 100px 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ff4fa3;
+        }
+
+        /* ABOUT */
+        #about {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #about img {
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        #about p {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonials div {
+            min-width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            scroll-snap-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        /* CONTACT + LOCATION */
+        .contact-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        form button {
+            padding: 12px;
+            border: none;
+            background: #ff4fa3;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background: #ff2f8c;
+        }
+
+        iframe {
+            flex: 1;
+            border-radius: 10px;
+            height: 300px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #ff4fa3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <h3>Cosmetic Beauty</h3>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home">
+        <div>
+            <h1>Glow With Confidence</h1>
+            <p>Premium cosmetic products designed to enhance your natural beauty.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df" alt="">
+        <p>
+            We are a luxury cosmetic brand offering natural, skin-friendly, and dermatologically tested beauty essentials. 
+            Our mission is to empower confidence and self-expression through premium-quality products.
+        </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <h2>Our Gallery</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+            <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df">
+            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+            <div>"Amazing quality! My skin feels so refreshed." – Sarah</div>
+            <div>"Best cosmetics I’ve ever used." – Amanda</div>
+            <div>"Natural, smooth and long-lasting!" – Emily</div>
+        </div>
+    </section>
+
+    <!-- CONTACT + LOCATION -->
+    <section id="contact">
+        <h2>Contact & Location</h2>
+        <div class="contact-box">
+            
+            <!-- Contact Form -->
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea rows="5" placeholder="Your Message"></textarea>
+                <button>Send Message</button>
+            </form>
+
+            <!-- Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450927!2d144.95373531590482!3d-37.816279842021675">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Cosmetic Beauty | All Rights Reserved
+    </footer>
+
+    <!-- NAVBAR SCROLL EFFECT -->
+    <script>
+        const nav = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) nav.classList.add("scrolled");
+            else nav.classList.remove("scrolled");
+        });
+    </script>
+
+</body>
+</html>

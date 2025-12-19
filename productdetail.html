@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            background-color: pink;
+            margin: 20px;
+        }
+        .product{
+            border: 1px solid burlywood;
+            padding: 10px;
+            margin: 15px auto;
+            width: 220px;
+            background: antiquewhite;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px black;
+            border-radius: 8px;
+        }
+        .product img{
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+        }
+        .info{
+            display: none;
+            margin-top: 10px;
+        }
+        .product:hover{
+            background-color: beige;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <!-- div 1 -->
+     <div class="product">
+        <img src="https://i.pinimg.com/736x/ff/d7/a7/ffd7a76293823fbdf8d3973ab31a87c7.jpg" alt="perfumess">
+        <p><b>Channel perfumess</b></p>
+        <!-- information div -->
+         <div class="info">
+            <p>price $10.00</p>
+            <p>floral scent that lasts 24hrs</p>
+         </div>
+     </div>
+     
+
+      <div class="product">
+        <img src="https://www.lizzieinlace.com/wp-content/uploads/2022/05/2-best-feminine-fragrances-1440x1068.jpg" alt="perfumess">
+        <p><b>Channel perfumess</b></p>
+        <!-- information div -->
+         <div class="info">
+            <p>price $10.00</p>
+            <p>floral scent that lasts 24hrs</p>
+         </div>
+     </div>
+ <script>
+    const products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+        const info = product.querySelector(".info");
+
+        product.addEventListener("click", () => {
+            // Hide all info boxes
+            document.querySelectorAll(".info").forEach(i => i.style.display = "none");
+
+            // Toggle this one
+            if (info.style.display === "block") {
+                info.style.display = "none";
+            } else {
+                info.style.display = "block";
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

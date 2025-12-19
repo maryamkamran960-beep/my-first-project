@@ -1,0 +1,29 @@
+*{  
+   margin: 0;
+   padding: 0%;
+   box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    padding: 15px 30px;
+    color: azure;
+}
+/* multiselector for logo and navbar */
+.navbar .logo{
+     font-size: 30px;
+     font-weight: bold;
+}
+    /* multiseletor for navbar navlinks list(li) */
+    .navbar .navlinks li a{
+    color: black;
+     text-decoration: double;
+     font-size: 16px;
+     transition: color 0.5s;
+}
+/* hover lagana on li navbar */
+.navbar .navlinks li a:hover {
+    color: black;
+}
