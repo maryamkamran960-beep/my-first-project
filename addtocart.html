@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Product list</h2>
+    
+        <p>Shoes</p>
+        
+     <button onclick="addtocart('Shoes',2000)">add shoes 2000</button>
+     <button onclick="addtocart('Shirt',4000)">add shirt 4000</button>
+     <button onclick="addtocart('watch',6000)">add watch 6000</button>
+
+     <hr>
+
+     <h2>Add to cart</h2>
+     <div id="cartbox"></div>
+
+     <h3>Total items: <span id="totalCount">0</span></h3>
+     <h3>Total price: Rs <span id="totalprice">0</span></h3>
+     <script>
+        let cart = [];
+        function addtocart(productname ,price ){
+            cart.push({name : productname, price : price});
+            rendercart();
+        }
+       function rendercart(){
+    let box = document.getElementById("cartbox");
+    let count = document.getElementById("totalCount");
+    let totalpriceTag = document.getElementById("totalprice");
+
+    let output = "";
+    let totalprice = 0;
+
+    for(let i = 0; i < cart.length; i++){
+        output += `
+        <p>${i + 1}. ${cart[i].name} - Rs ${cart[i].price}</p>
+        `;
+        totalprice += cart[i].price;
+    }
+
+    box.innerHTML = output;
+    count.innerHTML = cart.length;
+    totalpriceTag.innerHTML = totalprice;
+}
+
+     </script>
+</body>
+</html>
